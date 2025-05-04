@@ -1,0 +1,62 @@
+body{
+    font-family: arial;
+    background-color: #0D1117;
+    color: #C9D1D9;
+}
+
+h1{
+    color: #58A6FF;
+}
+
+/*Attribute selector*/
+a{
+    color: #8B949E;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #1F6FEB;
+}
+/*chlid slector*/
+ul>li{
+    font-weight: bold;
+}
+
+/* Sibling selector*/
+h1+p{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+/*:hover psedudo-class*/
+ul li:hover{
+    color: #4F8CC9;
+}
+
+/*:nth-child(n) pseudo-class*/
+ul li:nth-child(3){
+    background-color: #21262D;
+}
+
+/* :not(selector) pseudo-class*/
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+
+/*::before pseudo-element*/
+ul li::before{
+    content: 🚀;
+}
+
+/* ::after pseudo-element*/
+a::after{
+    content: 🌌;
+}
+
+/* ::first-letter pseudo-element*/
+p::first-letter{
+    font-size: 200%;
+    color: #FF7B72;
+}

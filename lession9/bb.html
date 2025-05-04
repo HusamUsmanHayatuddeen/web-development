@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Class Magic ✨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fdfdfd;
+            color: #333;
+            padding: 40px;
+        }
+
+        h1::before {
+            content: "🌟 ";
+        }
+
+        h1::after {
+            content: " ✨";
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        li {
+            background: #ecf0f1;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+            position: relative;
+        }
+
+        li:hover {
+            background: #d1f7e3;
+        }
+
+        li:first-child {
+            font-weight: bold;
+            color: #16a085;
+        }
+
+        li::before {
+            content: "→ ";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+
+        li:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>WELCOME TO CODINGAL</h1>
+
+    <ul>
+        <li>Htmlclass (styled with :first-child)</li>
+        <li>Css Class</li>
+        <li>Java Class</li>
+        <li>Python Class</li>
+        <li>Math</li>
+    </ul>
+
+    <div style="text-align: center;">
+        <a href="#">Hover me</a>
+    </div>
+
+</body>
+
+</html>

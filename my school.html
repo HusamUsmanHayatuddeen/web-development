@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KID WINDOW HIGH - School Information</title>
+
+    <!-- Bootstrap CSS from Replit theme -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>
+                kids Window High
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#streams">Streams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero-section py-5 mb-4 bg-primary text-white">
+        <div class="container text-center">
+            <h1 class="display-3 mb-3">Kids Window High</h1>
+            <p class="lead">Cultivating Excellence, Nurturing Minds, Building Futures</p>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- School Overview -->
+        <section id="about" class="py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">School Information</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex">
+                                    <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                                    <div>
+                                        <strong>Address:</strong><br>
+                                        KIDS WINDOW HIGH,
+                                        BEHIND INDUSTRIAL COURT,
+                                        BUBA SHANGO,
+                                        GOMBE,
+                                        GOMBE STATE.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <i class="fas fa-users me-2 mt-1"></i>
+                                    <div>
+                                        <strong>Student Population:</strong><br>
+                                        200 students currently enrolled
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <i class="fas fa-certificate me-2 mt-1"></i>
+                                    <div>
+                                        <strong>Board Affiliation:</strong><br>
+                                        TRANING A NEW GENERATION
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Our Mission</h2>
+                            <p class="card-text">
+                                <strong>Kids Window High</strong>
+                            </p>
+                            <p class="card-text">
+                                At Kids Window High, we are committed to providing a comprehensive
+                                educational experience that nurtures intellectual curiosity, fosters
+                                personal growth, and develops responsible citizens ready to contribute
+                                to society.
+                            </p>
+                            <p class="card-text">
+                                We believe in a holistic approach to education that balances academic
+                                excellence with character development, empowering students to achieve
+                                their full potential.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Academic Streams -->
+        <section id="streams" class="py-4">
+            <h2 class="text-center mb-4">Academic Streams Offered</h2>
+            <div class="row">
+                {% for stream in school.streams %}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+
+                            <i class="fas fa-flask stream-icon mb-3"></i>
+                            stream == "Commerce"
+                            <i class="fas fa-chart-line stream-icon mb-3"></i>
+                            elif stream == "Arts"
+                            <i class="fas fa-palette stream-icon mb-3"></i>
+                            elif stream == "Vocational Studies"
+                            <i class="fas fa-tools stream-icon mb-3"></i>
+                            else
+                            <i class="fas fa-book stream-icon mb-3"></i>
+                            endif
+                            <h3 class="card-title">{{ stream }}</h3>
+                            <p class="card-text">
+                                Comprehensive {{ stream.lower() }} curriculum designed to
+                                prepare students for higher education and career opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- School Highlights -->
+        <section class="py-4">
+            <h2 class="text-center mb-4">School Highlights</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-award mb-3 highlight-icon"></i>
+                            <h3 class="card-title">Academic Excellence</h3>
+                            <p class="card-text">
+                                Consistently high passing rates and achievement scores across all subjects
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop mb-3 highlight-icon"></i>
+                            <h3 class="card-title">Modern Facilities</h3>
+                            <p class="card-text">
+                                Well-equipped laboratories, library resources, and technology integration
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-running mb-3 highlight-icon"></i>
+                            <h3 class="card-title">Extracurricular Activities</h3>
+                            <p class="card-text">
+                                Diverse sports programs, cultural clubs, and community service opportunities
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-4 mb-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-phone me-3 mt-1"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    (555) 123-4567
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-envelope me-3 mt-1"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@kidswindowhigh.edu
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fas fa-clock me-3 mt-1"></i>
+                                <div>
+                                    <strong>Office Hours:</strong><br>
+                                    Monday to Friday: 8:00 AM - 4:00 PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row" -md-6">
+                <h5>Kids Window High</h5>
+                <p>KIDS WINDOW HIGH,
+                    BEHIND INDUSTRIAL COURT,
+                    BUBA SHANGO,
+                    GOMBE,
+                    GOMBE STATE.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p>&copy; 2025 {{ school.name }}. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
