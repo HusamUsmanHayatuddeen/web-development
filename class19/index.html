@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button onclick="multiplication(5)">Execute js function</button>
+
+        <script>
+            function multiplication(x , y )
+            if (y==undefined){
+                y=2;
+                document.write(x*y)
+            }
+            
+        </script>
+        <p> A function can access variable definned inside the function:</p>
+        <button type="button" onclick="myFunction()">clik me!</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            var b=5;
+            function myFunction(){
+                var a=4;
+                document.getElementById("demo").innerHTML=b*a;
+            }
+            document.getElementById("demo1").innerHTML =a;
+            document.getElementById("demon1").innerHTML=b;
+        </script>
+        <p>Setting a default value to function prameter.</p>
+        <p id="num"></p>
+        <script>
+            function myFunction(x,y){
+                if (y== undefined){
+                    y=2;
+                }
+                return x * y ;
+            }
+            document.getElementById("num").innerHTML=myFunction(5);
+        </script>
+    </body>
+</html>
