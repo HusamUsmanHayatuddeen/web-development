@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <h2>javascript string</h2>
+    <p>Basic methon</p>
+
+    <body>
+<script>
+var str="AmAzInG"
+document.write(str.toUpperCase())
+    document.write("<br>");
+
+        document.write(str.toLowerCase());
+
+        document.write("<br>");
+
+        document.write(str.startsWith('i'));
+
+        document.write("<br>");
+
+
+        // Test Method -> returns true or false
+
+        var str1 = "I learnt about Methods";
+
+        var patt = new RegExp("about");
+
+        var res = patt.test(str);
+
+        document.write(res);
+</script>
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+
+    var fruits = ["Apple", "Mango", "Grapes", "Watermelon", "Jack Fruit", "Banana"];
+
+    //var text;
+
+
+    for (i = 0; i < fruits.length; i++) {
+
+        var text = fruits[i] + "<br>";
+
+        //document.getElementById("demo").innerHTML = text;
+
+        document.write(text);
+
+    }
+
+
+</script>
+<p id="demo2"></p>
+
+<script>
+
+    var day;
+
+    switch (new Date().getDay()) {
+
+        case 0:
+
+            day = "Sunday";
+
+            break;
+
+        case 1:
+
+            day = "Monday";
+
+            break;
+
+        case 2:
+
+            day = "Tuesday";
+
+            break;
+
+        case 3:
+
+            day = "Wednesday";
+
+            break;
+
+        case 4:
+
+            day = "Thursday";
+
+            break;
+
+        case 5:
+            day = "Friday";
+
+                        break;
+
+                    case 6:
+
+                        day = "Saturday";
+
+                }
+
+                document.getElementById("demo2").innerHTML = "Today is " + day;
+
+            </script>
+
+    </body>
+</html>
