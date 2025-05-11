@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+         <h2>JavaScript objects and its properties</h2>
+
+         <p>There are two differbt ways to access an objet property</p>
+         <p>you can use .property or ["property"]</p>
+         <p id="demo"></p>
+         <script>
+            // Create an object:
+            var person = {
+                firstName:"I",
+                age:20,
+            };
+            // Display some data from the object:
+            document.getElementById("demo").innerHTML=person.firstName+"am"+person.age+"years old";
+         </script>
+         <script type="text/javascript">
+            var value = math.acos(-1);
+            document.write("Demo1 Test value :"+ value+" + <br>");
+            var value = math.asin(1);
+            document.write("demo2 test value:"+value +"<br>")
+            var value = math. atan(.5);
+            document.write("demo3 test value :" + value +"
+            <br>")
+         </script>
+         <p>finding the largest numder with help of argument odgects</p>
+         <p id="reault"></p>
+         <script>
+            function findMax(){
+
+                var max =0;
+                for(i=0; i<arguments.length:i++){
+                    if (arguments[i]>max){max=arguments[i]}
+                }
+            }
+            
+            return max;        }
+            document.getElementById("result").innerHTML=findMax(8,4,5,6,2);
+
+         </script>
+    </body>
+</html>
