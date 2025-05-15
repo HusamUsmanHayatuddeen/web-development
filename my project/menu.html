@@ -10,6 +10,7 @@
         body {
             background-color: #2c3e50;
             color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .navbar {
@@ -18,10 +19,44 @@
 
         .navbar-brand {
             color: #ecf0f1 !important;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #bdc3c7 !important;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: #ffffff !important;
         }
 
         .card {
             margin-top: 20px;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .btn-order {
+            background-color: #e67e22;
+            border: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .btn-order:hover {
+            background-color: #d35400;
         }
 
         footer {
@@ -29,6 +64,7 @@
             color: #ecf0f1;
             text-align: center;
             padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -62,38 +98,41 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row text-center my-5">
-            <h1>Welcome to FoodNow</h1>
-            <p>Partner with us and get your food delivered to the customer's doorstep.</p>
+            <h1 class="fw-bold">Welcome to FoodNow</h1>
+            <p class="lead">Partner with us and get your food delivered to the customer's doorstep.</p>
         </div>
 
-        <div class="row">
+        <div class="row g-4">
             <div class="col-md-4">
-                <div class="card">
-                    <img src="images/spicy-kitchen.jpg" class="card-img-top" alt="Spicy Kitchen">
+                <div class="card bg-light text-dark">
+                    <img src="spicy-kitchen.png" class="card-img-top" alt="Spicy Kitchen">
+                    <img src="download.jpeg" class="img-fluid" alt="Spicy Kitchen Menu">
                     <div class="card-body">
                         <h5 class="card-title">Spicy Kitchen</h5>
                         <p class="card-text">Enjoy the spiciest meals in town, delivered to you!</p>
-                        <a href="restaurants.html" class="btn btn-primary">Explore Menu</a>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
-                    <img src="images/taste-of-naija.jpg" class="card-img-top" alt="Taste of Naija">
+                <div class="card bg-light text-dark">
+                    <img src="taste-of-naija.jpeg" class="card-img-top" alt="Taste of Naija">
+                    <img src="download (2).jpeg" class="img-fluid" alt="Taste of Naija Menu">
                     <div class="card-body">
                         <h5 class="card-title">Taste of Naija</h5>
                         <p class="card-text">Authentic Nigerian dishes straight to your door.</p>
-                        <a href="restaurants.html" class="btn btn-primary">Explore Menu</a>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
-                    <img src="images/fastbites.jpg" class="card-img-top" alt="FastBites">
+                <div class="card bg-light text-dark">
+                    <img src="fastbites.jpeg" class="card-img-top" alt="FastBites">
+                    <img src="download (1).jpeg" class="img-fluid" alt="FastBites Menu">
                     <div class="card-body">
                         <h5 class="card-title">FastBites</h5>
                         <p class="card-text">Quick and tasty bites for every craving.</p>
-                        <a href="restaurants.html" class="btn btn-primary">Explore Menu</a>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
                     </div>
                 </div>
             </div>

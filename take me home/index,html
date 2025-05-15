@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Example in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2980b9;
+        }
+
+        .output {
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Loop Example</h1>
+    <p>This page uses a <strong>for loop</strong> to print numbers 1 to 10.</p>
+
+    <div class="output" id="loopOutput"></div>
+
+    <script>
+        // Get the output element
+        const output = document.getElementById("loopOutput");
+
+        // Use a for loop to print numbers 1 to 10
+        for (let i = 1; i <= 10; i++) {
+            output.innerHTML += `Number: ${i} <br>`;
+        }
+    </script>
+
+</body>
+</html>
