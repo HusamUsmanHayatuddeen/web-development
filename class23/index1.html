@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <p>adding js as seperate file</p>
+    <button type="button" onclick="myFunction()">clike me</button>
+    <p id="demo"></p>
+    <script src="scrpit.js"></script>
+    <h1>real time validation using js</h1>
+    <hr>
+    <form id="loginform" onsubmit="validate(event)">
+        <fieldset>
+            <div>
+                <label for="email">email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="password">password:</label>
+                <input type="password" id="password"
+                name="password" minlength="8">
+            </div>
+            <div>
+                <label for="age">age</label>
+                <input type="number"
+                id="age" name="age"
+                min="12"
+                max="50"
+
+            </div>
+            <button type="submit">login</button>
+        </fieldset>
+    </form>
+    <div id="message"></div>
+
+    </body>
+</html>
