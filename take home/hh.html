@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of Even Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Calculate Sum of Even Numbers</h2>
+
+    <input type="number" id="maxNumber" placeholder="Enter a number" />
+    <br />
+    <button onclick="handleSum()">Calculate</button>
+
+    <div id="output"></div>
+
+    <script>
+        // Method to calculate sum of even numbers up to 'limit'
+        function sumEvenNumbers(limit) {
+            let sum = 0;
+            for (let i = 2; i <= limit; i += 2) { // loop through even numbers
+                sum += i;
+            }
+            return sum;
+        }
+
+        // Method to handle the button click
+        function handleSum() {
+            const input = parseInt(document.getElementById('maxNumber').value);
+            const output = document.getElementById('output');
+
+            if (isNaN(input) || input < 2) {
+                output.innerText = "Please enter a valid number greater than or equal to 2.";
+            } else {
+                const result = sumEvenNumbers(input);
+                output.innerText = `The sum of even numbers up to ${input} is ${result}.`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
