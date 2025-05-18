@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of Arguments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2d3436;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Sum of Arguments</h2>
+    <p>Enter numbers separated by commas:</p>
+    <input type="text" id="numbersInput" placeholder="e.g. 10, 20, 30, 40" />
+    <br />
+    <button onclick="handleSum()">Calculate Sum</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Method to sum any number of arguments using rest parameters
+        function sumAll(...numbers) {
+            let sum = 0;
+            for (let num of numbers) {
+                sum += num;
+            }
+            return sum;
+        }
+
+        // Method to get input and show result
+        function handleSum() {
+            const input = document.getElementById('numbersInput').value;
+            const numArray = input.split(',').map(n => parseFloat(n.trim()));
+
+            if (numArray.some(isNaN)) {
+                document.getElementById('result').innerText = "Please enter valid numbers separated by commas.";
+            } else {
+                const total = sumAll(...numArray);
+                document.getElementById('result').innerText = `The sum is: ${total}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

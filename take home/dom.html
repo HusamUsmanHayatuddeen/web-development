@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessing DOM Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9fafb;
+            text-align: center;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #34495e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Get and Set Input Value Using DOM</h2>
+
+    <input type="text" id="userInput" placeholder="Type something here..." />
+    <br />
+    <button onclick="showValue()">Show Input Value</button>
+    <button onclick="changeValue()">Change Input Value</button>
+
+    <div id="output"></div>
+
+    <script>
+        // Access the input value and display it
+        function showValue() {
+            // Get input element by ID
+            const inputElement = document.getElementById('userInput');
+            // Access its value property
+            const value = inputElement.value;
+
+            // Show the value in the output div
+            document.getElementById('output').innerText = `You typed: ${value}`;
+        }
+
+        // Change the input value programmatically
+        function changeValue() {
+            const inputElement = document.getElementById('userInput');
+            inputElement.value = "Hello, DOM!";
+            document.getElementById('output').innerText = "Input value changed!";
+        }
+    </script>
+
+</body>
+
+</html>

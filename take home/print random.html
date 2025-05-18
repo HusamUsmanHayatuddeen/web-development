@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background: #f0f4f8;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #randomNumbers {
+            font-size: 20px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Generate Random Numbers</h2>
+    <button onclick="printRandomNumbers()">Print 5 Random Numbers (1 - 100)</button>
+
+    <div id="randomNumbers"></div>
+
+    <script>
+        function printRandomNumbers() {
+            const count = 5;       // How many numbers
+            const min = 1;         // Minimum value
+            const max = 100;       // Maximum value
+            let numbers = [];
+
+            for (let i = 0; i < count; i++) {
+                // Generate random number between min and max (inclusive)
+                let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+                numbers.push(randomNum);
+            }
+
+            // Display numbers joined by comma
+            document.getElementById('randomNumbers').innerText = numbers.join(', ');
+        }
+    </script>
+
+</body>
+
+</html>

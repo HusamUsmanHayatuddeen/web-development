@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #students {
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Records</h2>
+    <button onclick="showStudents()">Show Students</button>
+
+    <div id="students"></div>
+
+    <script>
+        // Array of student objects
+        const students = [
+            { name: "Alice", age: 20, course: "Mathematics" },
+            { name: "Bob", age: 22, course: "Computer Science" },
+            { name: "Chinedu", age: 19, course: "Physics" },
+            { name: "Fatima", age: 21, course: "Biology" }
+        ];
+
+        // Method to display students
+        function showStudents() {
+            let output = "<h3>Student Details:</h3><ul>";
+            for (let student of students) {
+                output += `<li><strong>${student.name}</strong> - Age: ${student.age}, Course: ${student.course}</li>`;
+            }
+            output += "</ul>";
+            document.getElementById("students").innerHTML = output;
+        }
+    </script>
+
+</body>
+
+</html>
