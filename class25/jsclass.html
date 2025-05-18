@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>javascirpt class</h2>
+        <p>how to use a javescript class.</p>
+        <p id="student1"></p>
+        <p id="student2"></p>
+        <script>
+            // creating a class
+            class student{
+                constructor(name,year){
+                    this.name =name;
+                    this.year=year;
+                }
+                // creating age method for class student
+                age(){
+                    let date=new Date();
+                    return date getFullyear()-this.year;
+                }
+            }
+            // use student class with two objets
+            student1=new student(riya,2014);
+            document.getElementById(student1).innerHTML="my na,me is"+ student1.name+".i born in"+student1.year+ ".And my age is"+ student1.age();
+
+            student2=new student("tina,2018")
+            document.getElementById("student2").innerHTML =
+                    "My name is " + student2.name + ". I born in " + student2.year + ". And my age is  " + student2.age();
+
+        </script>
+    </body>
+</html>
