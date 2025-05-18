@@ -15,12 +15,19 @@
 
         .navbar {
             background-color: #0f3460;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
 
-        .navbar-brand {
-            color: #f1c40f !important;
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            color: #20c997;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .nav-link {
@@ -37,7 +44,6 @@
             height: auto;
             max-height: 300px;
             object-fit: cover;
-            border-bottom: 4px solid #f1c40f;
         }
 
         .hero {
@@ -79,18 +85,23 @@
         }
 
         .btn-order {
-            background-color: #e67e22;
+            background-color: #20c997;
             border: none;
             color: white;
             font-weight: 500;
         }
 
         .btn-order:hover {
-            background-color: #d35400;
+            background-color: #17a589;
+        }
+
+        section h2 {
+            color: #20c997;
+            font-weight: 600;
         }
 
         footer {
-            background-color:lightblue;
+            background-color: #0f3460;
             color: #ecf0f1;
             text-align: center;
             padding: 20px;
@@ -101,13 +112,13 @@
 
 <body>
 
-    <!-- Header Image -->
-    <img src="husam.png" alt="FoodNow Banner" class="header-image" />
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FoodNow</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="husam.png" alt="Logo" />
+                <span>FoodNow</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -167,8 +178,75 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Additional Restaurants -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="yummy-shack.jpg" class="card-img-top" alt="Yummy Shack" />
+                    <div class="card-body">
+                        <h5 class="card-title">Yummy Shack</h5>
+                        <p class="card-text">Burgers, fries, and more – perfect for any craving!</p>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="green-garden.jpg" class="card-img-top" alt="Green Garden" />
+                    <div class="card-body">
+                        <h5 class="card-title">Green Garden</h5>
+                        <p class="card-text">Healthy meals made with the freshest ingredients.</p>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="rice-zone.jpg" class="card-img-top" alt="Rice Zone" />
+                    <div class="card-body">
+                        <h5 class="card-title">Rice Zone</h5>
+                        <p class="card-text">Rice meals from around the world delivered hot!</p>
+                        <a href="order.html" class="btn btn-order w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Why Choose Us -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Why Choose FoodNow?</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <img src="fast-delivery.png" alt="Fast Delivery" width="60" class="mb-3">
+                <h5>Fast Delivery</h5>
+                <p>Get your meals delivered in under 30 minutes anywhere in Gombe.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="quality-meals.png" alt="Quality Meals" width="60" class="mb-3">
+                <h5>Top Quality Meals</h5>
+                <p>Partnered with the best restaurants serving fresh and delicious food.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="support.png" alt="Support" width="60" class="mb-3">
+                <h5>24/7 Support</h5>
+                <p>Our support team is always ready to help you with your orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section class="container my-5 p-4 rounded" style="background-color: #0f3460;">
+        <div class="row align-items-center text-center text-lg-start">
+            <div class="col-lg-8">
+                <h3 class="text-white">Own a restaurant or want to deliver?</h3>
+                <p class="text-light mb-3">Join FoodNow and grow your business or earn with flexible delivery jobs.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="partner.html" class="btn btn-order btn-lg">Partner With Us</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
