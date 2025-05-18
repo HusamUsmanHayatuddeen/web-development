@@ -1,0 +1,32 @@
+<!DOCTYPE html>>
+<html>
+    <body>
+        <h2>javascirptcla Inheritance</h2>
+
+        <P id="details"></P>
+        <p id="greetings"></p>
+        class student{
+            constructor(name){
+                this.studentname = name:
+
+            }
+            present(){
+                return 'my name is '+ this.studentname;
+            }
+        }
+        class grade extend student{
+            constructor(name,grade){
+                super(name)
+                this.studentgrade=grade;
+            }
+            show(){
+                return this.present()+',from'+
+                this.studentgrade;
+            }
+        }
+        let myStudent =new grade("tina","grade6",);
+        docment.getElementById("details").innerHTML=myStudent.show();
+        
+        docment.getElementById("greeting").innerHTML=myStudent.hello();
+    </body>
+</html>
