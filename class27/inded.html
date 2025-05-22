@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+    <body>
+        <h2>javascript array sort</h2>
+        <p>click the button to sort the array in ascending order.</p>
+        <button onclick="ascending()">ascending order</button>
+        <button onclick="descending()">descending order</button>
+        <p id="result"></p>
+        <script>
+            var points =[40,50,60,6,30,82,66,100,10,1,2,3,4,5,6,7,8,9,0];
+            document.getElementById("result").innerHTML=points;
+            function ascending(){
+                points.sirt(function(a,b){return a-b});
+                document.getElementById("result").innerHTML=point;
+            }
+            function descending{({return b - a});
+            document.getElementById("result").innerHTML=point;
+        }
+        </script>
+        <p>Multiply every element in the array with 10:</p>
+        <p id="product_value"></p>
+        <script>
+            var number=[28,29,6,19,95,100];
+
+            function myFunction(num){
+                return num*10;
+            }
+            var newarry=number.map(myFunction);
+            document.getElementById("product_value").innerHTML=newarry;
+        </script>
+    </body>
+</html>
