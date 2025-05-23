@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>the javascript string() method</h2>
+
+        <p>the string() method can convert a number to a string.</p>
+        <p id="number_result"></p>
+        <p id="string_result"></p>
+
+        <script>
+            var x = 70;;
+            var y=90;
+            document.getElementById("number_result").innerHTML = x+y;
+
+            document.getElementById("string_result").innerHTML =string(x)+ string(y);//Does not add because it is a string it concatenates
+        </script>
+
+        <h2>javascripterror handling</h2>
+
+        <P>this example demonstrates how to use <b>catch</b>to display an error.
+        </P>
+        <p id="error_message"></p>
+        
+        <script>
+            try{
+                addalart("welcome guest!");
+            }
+            catch(err){
+                document.getElementById("error_message").innerHTML = err.message;
+            }
+        </script>
+        <h2>javascriptarrow function</h2>
+        <p>this example shows an arrow function with a parameter.</p>
+        <p id="result"></p>
+<script>
+    add = (a,b) => a+b;
+    document.getElementById("result").innerHTML = add(4,6);
+</script>
+    </body>
+</html>
