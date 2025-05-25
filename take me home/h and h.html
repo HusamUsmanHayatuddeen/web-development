@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Error Handling in JavaScript</title>
+</head>
+
+<body>
+
+    <h2>Error Handling Demo</h2>
+
+    <button onclick="handleSyncError()">Synchronous Error</button>
+    <button onclick="handleCustomError()">Custom Error</button>
+    <button onclick="handleAsyncError()">Async Fetch Error</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        const output = document.getElementById("output");
+
+        // Example 1: Synchronous Error Handling
+        function handleSyncError() {
+            output.innerText = "";
+            try {
+                let result = 10 / 0;
+                if (!isFinite(result)) {
+                    throw new Error("Division by zero is not allowed.");
+                }
+                output.innerText = `Result: ${result}`;
+            } catch (err) {
+                output.innerText = `Caught Error: ${err.message}`;
+            }
+        }
+
+        // Example 2: Throwing a Custom Error
+        function handleCustomError() {
+            output.innerText = "";
+            try {
+                let age = -5;
+                if (age < 0) {
+                    throw new RangeError("Age cannot be negative.");
+                }
+                output.innerText = `Age is: ${age}`;
+            } catch (err) {
+                output.innerText = `Custom Error: ${err.name} - ${err.message}`;
+            }
+        }
+
+        // Example 3: Asynchronous Error Handling with try/catch + async/await
+        async function handleAsyncError() {
+            output.innerText = "Fetching data...";
+
+            try {
+                // Simulate fetch to a bad URL
+                let response = await fetch("https://invalid-api.fakeendpoint.com/data");
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                let data = await response.json();
+                output.innerText = JSON.stringify(data, null, 2);
+            } catch (err) {
+                output.innerText = `Async Error Caught: ${err.message}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

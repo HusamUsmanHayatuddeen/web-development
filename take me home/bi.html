@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map and Sort Example</title>
+</head>
+
+<body>
+
+    <h2>Map & Sort Demo</h2>
+    <pre id="output"></pre>
+
+    <script>
+        const numbers = [5, 2, 8, 1, 4];
+
+        // Step 1: Map — Multiply each number by 2
+        const doubled = numbers.map(num => num * 2);
+
+        // Step 2: Sort — Ascending order
+        const sortedAsc = [...doubled].sort((a, b) => a - b);
+
+        // Step 3: Sort — Descending order
+        const sortedDesc = [...doubled].sort((a, b) => b - a);
+
+        // Display the results
+        document.getElementById("output").innerText =
+            `Original:     ${numbers}\n` +
+            `Doubled:      ${doubled}\n` +
+            `Sorted Asc:   ${sortedAsc}\n` +
+            `Sorted Desc:  ${sortedDesc}`;
+    </script>
+
+</body>
+
+</html>
