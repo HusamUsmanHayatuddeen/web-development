@@ -1,99 +1,196 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Food Now</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Restaurant Order</title>
+
     <style>
         body {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-        }
 
-        .navbar {
-            background-color: #34495e;
-        }
+            font-family: Arial, sans-serif;
 
-        .navbar-brand {
-            color: #ecf0f1 !important;
+            background: #f4f4f4;
+
+            padding: 20px;
+
         }
 
         .container {
-            margin-top: 30px;
+
+            background: #fff;
+
+            max-width: 600px;
+
+            margin: auto;
+
+            padding: 30px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            border-radius: 10px;
+
         }
 
-        footer {
-            background-color: #34495e;
-            color: #ecf0f1;
+        h2 {
+
             text-align: center;
-            padding: 20px;
+
+            color: #333;
+
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin: 10px 0;
+
+            box-sizing: border-box;
+
+        }
+
+        button {
+
+            background-color: #28a745;
+
+            color: white;
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #218838;
+
+        }
+
+        .confirmation {
+
+            margin-top: 20px;
+
+            background: #d4edda;
+
+            color: #155724;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+            display: none;
+
         }
     </style>
+
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">FoodNow</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="restaurants.html">Restaurants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="order.html">Order Now</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Order Form -->
     <div class="container">
-        <h1>Place Your Order</h1>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Your Phone</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-            </div>
-            <div class="mb-3">
-                <label for="address" class="form-label">Delivery Address</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter your delivery address">
-            </div>
-            <div class="mb-3">
-                <label for="restaurant" class="form-label">Choose a Restaurant</label>
-                <select class="form-select" id="restaurant">
-                    <option value="Spicy Kitchen">Spicy Kitchen</option>
-                    <option value="Taste of Naija">Taste of Naija</option>
-                    <option value="FastBites">FastBites</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Order</button>
+
+        <h2>Order Your Meal</h2>
+
+        <form id="orderForm">
+
+            <label>Full Name:</label>
+
+            <input type="text" id="name" required />
+
+            <label>Email:</label>
+
+            <input type="email" id="email" required />
+
+            <label>Phone Number:</label>
+
+            <input type="tel" id="phone" required />
+
+            <label>Select Dish:</label>
+
+            <select id="dish" required>
+
+                <option value="">-- Choose a dish --</option>
+
+                <option value="Pizza">Pizza</option>
+
+                <option value="Burger">Burger</option>
+
+                <option value="Pasta">Pasta</option>
+
+                <option value="Salad">Salad</option>
+
+            </select>
+
+            <label>Special Instructions:</label>
+
+            <textarea id="instructions" placeholder="Any allergies or preferences?"></textarea>
+
+            <button type="submit">Place Order</button>
+
         </form>
+
+        <div class="confirmation" id="confirmationMessage"></div>
+
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 FoodNow | All Rights Reserved</p>
-        <p>Contact us: 08051584070 | Address: Federal Low Cost, Gombe</p>
-    </footer>
+    <script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            // Collect form data
+
+            const name = document.getElementById('name').value;
+
+            const email = document.getElementById('email').value;
+
+            const phone = document.getElementById('phone').value;
+
+            const dish = document.getElementById('dish').value;
+
+            const instructions = document.getElementById('instructions').value;
+
+            // Simulate sending email (you would replace this with an actual API call)
+
+            const confirmationMessage = `
+
+<strong>Thank you, ${name}!</strong><br>
+
+Your order for <strong>${dish}</strong> has been received.<br>
+
+A confirmation email has been sent to <strong>${email}</strong>.<br><br>
+
+<em>Phone:</em> ${phone}<br>
+
+<em>Special Instructions:</em> ${instructions || 'None'}<br>
+
+`;
+
+            document.getElementById('confirmationMessage').innerHTML = confirmationMessage;
+
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Clear the form
+
+            document.getElementById('orderForm').reset();
+
+        });
+
+    </script>
+
 </body>
 
 </html>
