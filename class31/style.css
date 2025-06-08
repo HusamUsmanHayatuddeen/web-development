@@ -56,3 +56,14 @@ html{
  .card{
    border-bottom: 8px solid #f5ba09;
  }
+
+ #social-media{
+   background: #313552;
+ }
+
+ .media_link{
+   padding: 1rem;
+   max-width: 15rem;
+   margin-left: 1rem;
+   border: 2px solid #f5ba09;
+ }
