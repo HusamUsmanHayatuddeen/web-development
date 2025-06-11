@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .cloth-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cloth-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .cloth-item button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .cloth-item button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Our Cloth Store</h1>
+    </header>
+
+    <div class="container">
+        <div class="cloth-item">
+            <h2>Cotton T-Shirt</h2>
+            <img src="download.jpeg" alt="Cotton T-Shirt">
+            <p>High-quality cotton t-shirt, perfect for casual wear. Price: $15</p>
+            <button onclick="alert('Cotton T-Shirt added to cart!')">Add to Cart</button>
+        </div>
+
+        <div class="cloth-item">
+            <h2>Denim Jeans</h2>
+            <img src="download (1).jpeg" alt="Denim Jeans">
+            <p>Stylish denim jeans for everyday use. Price: $25</p>
+            <button onclick="alert('Denim Jeans added to cart!')">Add to Cart</button>
+        </div>
+
+        <div class="cloth-item">
+            <h2>Silk Scarf</h2>
+            <img src="download (1).jpeg" alt="Silk Scarf">
+            <p>Elegant silk scarf to enhance your style. Price: $20</p>
+            <button onclick="alert('Silk Scarf added to cart!')">Add to Cart</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

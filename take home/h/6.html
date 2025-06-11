@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bank - Your Trusted Financial Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #003366;
+            border-bottom: 3px solid #003366;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .account-option {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .account-option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00264d;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Simple Bank</h1>
+        <p>Your Trusted Financial Partner</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Secure & Easy Banking</h1>
+    </div>
+
+    <div class="container">
+
+        <div id="home" class="section">
+            <h2>Welcome to Simple Bank</h2>
+            <p>Simple Bank provides reliable, fast, and secure banking services. Whether you want to save, invest, or
+                get a loan, we are here to help you achieve your financial goals with full confidence and trust.</p>
+        </div>
+
+        <div id="services" class="section">
+            <h2>Our Services</h2>
+
+            <div class="account-grid">
+                <div class="account-option">
+                    <h3>Savings Account</h3>
+                    <p>Enjoy high interest rates and easy withdrawals with our flexible savings account options.</p>
+                    <button onclick="alert('Savings Account Opened Successfully!')">Open Account</button>
+                </div>
+
+                <div class="account-option">
+                    <h3>Current Account</h3>
+                    <p>Manage daily transactions with a fast and reliable current account tailored for you.</p>
+                    <button onclick="alert('Current Account Opened Successfully!')">Open Account</button>
+                </div>
+
+                <div class="account-option">
+                    <h3>Loan Services</h3>
+                    <p>Apply for quick personal or business loans at competitive interest rates with easy repayment
+                        plans.</p>
+                    <button onclick="alert('Loan Application Submitted Successfully!')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:husamusmanhayatuddeen@gmail.com">husamusmanhayatuddeen@gmail.com</a></p>
+            <p>Phone: <a href="tel:08051584070">08051584070</a></p>
+
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Simple Bank. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
